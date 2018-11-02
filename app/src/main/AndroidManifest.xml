@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.roufroufrouf.belajar">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ExampleActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".example3.DemoActivity" />
+        <activity android:name=".example5.Example5Activity" />
+        <activity android:name=".example5.SecondActivity" />
+        <activity android:name=".example6.ExSixActivity" />
     </application>
 
 </manifest>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Belajar</string>
+    <string name="toolbar_profile">Profile</string>
+    <string name="posts">POSTS</string>
+    <string name="followers">FOLLOWERS</string>
+    <string name="following">FOLLOWING</string>
+    <string name="promotion_special_label">Ex 6</string>
 </resources>

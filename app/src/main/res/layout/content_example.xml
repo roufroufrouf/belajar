@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="id.roufroufrouf.belajar.UtilsKt" />
+
+        <variable
+            name="user"
+            type="id.roufroufrouf.belajar.User" />
+
+        <variable
+            name="handlers"
+            type="id.roufroufrouf.belajar.MyClickHandlers" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="?attr/actionBarSize"
+        tools:context=".ExampleActivity"
+        tools:showIn="@layout/activity_example">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{UtilsKt.toUpper(user.name)}"
+            tools:text="Nama" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.email}"
+            tools:text="Email" />
+
+        <ImageView
+            android:id="@+id/avatar"
+            app:imageUrl="@{user.avatar}"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{handlers::onButtonClick}"
+            android:text="CLICK" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> handlers.onButtonClickWithParam(v, user)}"
+            android:text="CLICK WITH PARAM" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LONG PRESS"
+            android:onLongClick="@{handlers::onButtonLongPressed}" />
+    </LinearLayout>
+</layout>

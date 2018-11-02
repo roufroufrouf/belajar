@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</android.support.constraint.ConstraintLayout>
+        <variable
+            name="user"
+            type="id.roufroufrouf.belajar.User" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/fab_margin"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.name}"
+            tools:text="name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.email}"
+            tools:text="email" />
+
+        <Button
+            android:id="@+id/btnCek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coba Ubah Data" />
+
+        <Button
+            android:id="@+id/btnToExample2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="to Example 2" />
+
+        <Button
+            android:id="@+id/btnToExample3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Example Grid RecyclerView" />
+
+        <Button
+            android:id="@+id/btnToExample4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To example 4" />
+
+        <Button
+            android:id="@+id/btnToExample5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To example 5" />
+
+        <Button
+            android:id="@+id/btnToExample6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To example 6" />
+    </LinearLayout>
+</layout>
